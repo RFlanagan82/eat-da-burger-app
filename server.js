@@ -16,7 +16,7 @@ app.set("view engine", "handlebars");
 //VIEWS ROUTES
 
 app.get("/", (req, res) => {
-    connection.query("SELECT * FROM ...", (err,data) => {
+    connection.query("SELECT * FROM burger_db", (err,data) => {
         console.table(data);
     })
     res.render("index");
@@ -29,9 +29,6 @@ app.get("/api/config", (req,res) => {
         success: true,
     });
 });
-
-
-
 
 
 //APP LISTENER
