@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     connection.query("SELECT * FROM ...", (err,data) => {
         console.table(data);
     })
-    res.render("index", {name: "Ryan"});
+    res.render("index");
 });
 
 //API ROUTEs
