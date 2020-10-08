@@ -12,9 +12,8 @@ if(process.env.JAWSDB_URL){
         port: "3306",
         password: "Alucard1",
         database: "burger_db"
-    })
-}
+    });
+};
 
 connection.connect();
-
 module.exports = connection;
