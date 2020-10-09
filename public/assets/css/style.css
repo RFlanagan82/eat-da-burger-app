@@ -1,9 +1,18 @@
+body {
+background-color: #fec55c!important;
+}
+
 li {
     padding: 5px;
     margin: 5px;
     background: #faebd7;
   }
   
+  .app-title {
+    font-family: 'Sansita Swashed', cursive;
+    color:red;
+  }
+
   .label {
     font-weight: bold;
   }
@@ -16,5 +25,14 @@ li {
   
   .form-group {
     margin-bottom: 5px;
+  }
+
+  .add-burger {
+    font-family: 'Sansita Swashed', cursive;
+  }
+
+  #video {
+    display: block;
+    margin: 0 auto;
   }
   
