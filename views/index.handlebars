@@ -5,8 +5,16 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-sm-12 text-center">
+           <p>
+            <img src = "/public/assets/burgerimage.png"
+         alt = "burgerimage"/>  
+           </p> 
+        </div>
+    </div>
+    <div class="row">
         <div class="col-sm-5">
-            <h2>Burgers ready to eat!</h2>
+            <h4>Burgers ready to eat!</h4>
             <ul>
             {{#each burgers}}
             {{#unless devoured}}
@@ -15,22 +23,21 @@
             {{/each}}
             </ul>
         </div>
-    </div>
-    
-    <div class="col-sm-2">
+        <div class="col-sm-2">
 
-    </div>
+        </div>
         <div class="col-sm-5">
-            <h2>Burgers that have been eaten!</h2>
+            <h4>Burgers that have been eaten!</h4>
             <ul>
             {{#each burgers}}
             {{#if devoured}}
             {{> burgers/burger-block devoured=false}}
             {{/if}}
             {{/each}}
-        </ul>
+            </ul>
         </div>
-
+    </div>
+    
     <div class="row">
         <div class="col-sm-12 text-center">
             <h2>Add a Burger</h2>
