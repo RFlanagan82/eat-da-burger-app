@@ -17,22 +17,26 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-//VIEWS ROUTES
 
-app.get("/", (req, res) => {
-    connection.query("SELECT * FROM burger", (err,data) => {
-        console.table(data);
-    })
-    res.render("index");
-});
+// Import routes and give the server access to them.
+var routes = require("./controllers/burgersController");
 
-//API ROUTEs
+app.use(routes);
 
-app.get("/api/config", (req,res) => {
-    res.json ({
-        success: true,
-    });
-});
+// //VIEWS ROUTES
+// app.get("/", (req, res) => {
+//     connection.query("SELECT * FROM burger", (err,data) => {
+//         console.table(data);
+//     })
+//     res.render("index");
+// });
+
+// //API ROUTEs
+// app.get("/api/config", (req,res) => {
+//     res.json ({
+//         success: true,
+//     });
+// });
 
 
 //APP LISTENER
